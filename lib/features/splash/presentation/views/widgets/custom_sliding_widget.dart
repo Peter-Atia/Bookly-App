@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
 class CustomSlidingWidget extends StatefulWidget {
-
-  const CustomSlidingWidget({super.key, required this.begin, required this.end, required this.widget});
-  final Offset begin ;
-  final Offset end ;
+  const CustomSlidingWidget({
+    super.key,
+    required this.begin,
+    required this.end,
+    required this.widget,
+  });
+  final Offset begin;
+  final Offset end;
   final Widget widget;
   @override
   State<CustomSlidingWidget> createState() => _CustomSlidingWidgetState();
 }
 
-class _CustomSlidingWidgetState extends State<CustomSlidingWidget> with SingleTickerProviderStateMixin{
-
-
+class _CustomSlidingWidgetState extends State<CustomSlidingWidget>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
