@@ -7,7 +7,7 @@ class FeaturedListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.only(right: 14),
       child: AspectRatio(
         aspectRatio: 1.8 / 3,
         child: Container(
