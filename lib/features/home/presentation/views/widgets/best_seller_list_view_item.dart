@@ -14,26 +14,23 @@ class BestSellerItem extends StatelessWidget {
         children: [
           SizedBox(child: FeaturedListViewItem()),
           SizedBox(width: 6),
-          Container(
-            color: Colors.green,
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * .55,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Name", style: Styles.textStyle20),
-                  const SizedBox(height: 3),
-                  Text("Author", style: Styles.textStyle14),
-                  const SizedBox(height: 3),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Price", style: Styles.textStyle20),
-                      BookRating(),
-                    ],
-                  ),
-                ],
-              ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * .55,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Name", style: Styles.textStyle20),
+                const SizedBox(height: 3),
+                Text("Author", style: Styles.textStyle14),
+                const SizedBox(height: 3),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Price", style: Styles.textStyle20),
+                    BookRating(),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
