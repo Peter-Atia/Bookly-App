@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'list_view_item.dart';
+import 'book_cover.dart';
 
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -14,7 +14,7 @@ class FeaturedBooksListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount:5,
         itemBuilder: (context,index){
-          return FeaturedListViewItem();
+          return BookCover();
         },
       ),
     );
