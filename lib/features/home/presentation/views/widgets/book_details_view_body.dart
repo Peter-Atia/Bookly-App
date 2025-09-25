@@ -5,6 +5,15 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(30),
+        child: Column(
+          children: [
+
+          ],
+        ),
+      ),
+    );
   }
 }
