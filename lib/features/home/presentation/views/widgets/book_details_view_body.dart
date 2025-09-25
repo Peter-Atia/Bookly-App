@@ -20,10 +20,16 @@ class BookDetailsViewBody extends StatelessWidget {
                   child: BookCover(),
                 ),
               ),
-              Text("Name", style: Styles.textStyle20),
-              Padding(
-                padding: const EdgeInsets.only(top: 6.0),
-                child: Text("author"),
+              const SizedBox(height: 30,),
+              const Text("Name", style: Styles.textStyle30),
+              const SizedBox(height: 6,),
+              Opacity(
+                opacity: 0.7,
+                child: Text("author",style: Styles.textStyle18.copyWith(
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w500,
+
+                ),),
               ),
             ],
           ),
