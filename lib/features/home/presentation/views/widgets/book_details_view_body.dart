@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'book_cover.dart';
 
@@ -20,17 +21,21 @@ class BookDetailsViewBody extends StatelessWidget {
                   child: BookCover(),
                 ),
               ),
-              const SizedBox(height: 30,),
+              const SizedBox(height: 30),
               const Text("Name", style: Styles.textStyle30),
-              const SizedBox(height: 6,),
+              const SizedBox(height: 6),
               Opacity(
                 opacity: 0.7,
-                child: Text("author",style: Styles.textStyle18.copyWith(
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w500,
-
-                ),),
+                child: Text(
+                  "author",
+                  style: Styles.textStyle18.copyWith(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ),
+              const SizedBox(height: 16),
+              const BookRating(),
             ],
           ),
         ),
