@@ -7,7 +7,7 @@ class BookCover extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 14),
+      padding: const EdgeInsets.only(right: 10),
       child: AspectRatio(
         aspectRatio: 1.8 / 3,
         child: Container(
