@@ -11,52 +11,57 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30),
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .50,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 12),
-                  child: BookCover(),
-                ),
-              ),
-              const SizedBox(height: 30),
-              const Text("Name", style: Styles.textStyle30),
-              const SizedBox(height: 6),
-              Opacity(
-                opacity: 0.7,
-                child: Text(
-                  "author",
-                  style: Styles.textStyle18.copyWith(
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w500,
+      body: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .50,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: BookCover(),
+                    ),
                   ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              const BookRating(),
-              const SizedBox(height: 37),
-              const BookActions(),
-              const SizedBox(height: 50),
-              Align(
-                alignment : Alignment.centerLeft,
-                child: Text(
-                  "You can also like",
-                  textAlign: TextAlign.start,
-                  style: Styles.textStyle14.copyWith(
-                      fontWeight: FontWeight.w600
+                  const SizedBox(height: 30),
+                  const Text("Name", style: Styles.textStyle30),
+                  const SizedBox(height: 6),
+                  Opacity(
+                    opacity: 0.7,
+                    child: Text(
+                      "author",
+                      style: Styles.textStyle18.copyWith(
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(height: 16),
+                  const BookRating(),
+                  const SizedBox(height: 37),
+                  const BookActions(),
+                  const SizedBox(height: 50),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "You can also like",
+                      textAlign: TextAlign.start,
+                      style: Styles.textStyle14.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  BookDetailsListView(),
+                  SafeArea(child: SizedBox()),
+                ],
               ),
-              const SizedBox(height: 16),
-              BookDetailsListView(),
-
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
