@@ -18,7 +18,7 @@ class BookDetailsViewBody extends StatelessWidget {
                 children: [
                   const BookDetailsSection(),
                   const SizedBox(height: 50),
-                  SimilarBooksSection(),
+                  const SimilarBooksSection(),
                   SafeArea(child: SizedBox()),
                 ],
               ),
