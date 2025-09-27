@@ -7,7 +7,7 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: CustomScrollView(
         slivers: [
           SliverFillRemaining(
@@ -16,9 +16,9 @@ class BookDetailsViewBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 children: [
-                  const BookDetailsSection(),
-                  const SizedBox(height: 50),
-                  const SimilarBooksSection(),
+                  BookDetailsSection(),
+                  SizedBox(height: 50),
+                  SimilarBooksSection(),
                   SafeArea(child: SizedBox()),
                 ],
               ),
